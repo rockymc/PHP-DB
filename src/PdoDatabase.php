@@ -64,7 +64,7 @@ final class PdoDatabase implements Database {
 			// set the default fetch mode for this connection to use associative arrays
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 			// prefer native prepared statements over emulated ones
-			PDO::ATTR_EMULATE_PREPARES => false,
+			//PDO::ATTR_EMULATE_PREPARES => false,
 			// use lowercase and uppercase as returned by the server
 			PDO::ATTR_CASE => PDO::CASE_NATURAL,
 			// don't convert numeric values to strings when fetching data
