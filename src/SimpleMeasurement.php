@@ -6,7 +6,7 @@
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
  */
 
-namespace Delight\Db;
+namespace rockymc\Db;
 
 /** Implementation of an individual measurement of a profiler that monitors performance */
 final class SimpleMeasurement implements Measurement {

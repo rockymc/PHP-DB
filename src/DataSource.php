@@ -6,7 +6,7 @@
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
  */
 
-namespace Delight\Db;
+namespace rockymc\Db;
 
 /** Description of a data source */
 interface DataSource {

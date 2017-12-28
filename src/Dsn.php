@@ -6,7 +6,7 @@
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
  */
 
-namespace Delight\Db;
+namespace rockymc\Db;
 
 /** Data source name or connection string describing how to connect to a data source */
 interface Dsn {}

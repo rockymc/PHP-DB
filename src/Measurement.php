@@ -6,7 +6,7 @@
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
  */
 
-namespace Delight\Db;
+namespace rockymc\Db;
 
 /** Individual measurement of a profiler that monitors performance */
 interface Measurement {

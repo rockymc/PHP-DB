@@ -36,7 +36,7 @@ Safe and convenient SQL database access in a driver-agnostic way
  * From a dynamic database configuration:
 
    ```php
-   $dataSource = new \Delight\Db\PdoDataSource('mysql');
+   $dataSource = new \rockymc\Db\PdoDataSource('mysql');
    $dataSource->setHostname('localhost');
    $dataSource->setPort(3306);
    $dataSource->setDatabaseName('my-database');
@@ -44,7 +44,7 @@ Safe and convenient SQL database access in a driver-agnostic way
    $dataSource->setUsername('my-username');
    $dataSource->setPassword('my-password');
 
-   $db = \Delight\Db\PdoDatabase::fromDataSource($dataSource);
+   $db = \rockymc\Db\PdoDatabase::fromDataSource($dataSource);
    ```
 
    This is the most convenient way to establish the database connection since the correct DSN will be created for you automatically. You can use the various setters with a fluent interface in order to set up your configuration.
@@ -56,8 +56,8 @@ Safe and convenient SQL database access in a driver-agnostic way
  * From a DSN (data source name):
 
    ```php
-   $db = \Delight\Db\PdoDatabase::fromDsn(
-       new \Delight\Db\PdoDsn(
+   $db = \rockymc\Db\PdoDatabase::fromDsn(
+       new \rockymc\Db\PdoDsn(
            'mysql:dbname=my-database;host=localhost',
            'my-username',
            'my-password'
@@ -74,7 +74,7 @@ Safe and convenient SQL database access in a driver-agnostic way
    ```php
    // $pdo = new PDO('mysql:dbname=my-database;host=localhost;charset=utf8mb4', 'my-username', 'my-password');
 
-   $db = \Delight\Db\PdoDatabase::fromPdo($pdo);
+   $db = \rockymc\Db\PdoDatabase::fromPdo($pdo);
    ```
 
    This will not cause another database connection to be created but instead re-use the existing connection from the `PDO` instance that you provided.
@@ -84,7 +84,7 @@ Safe and convenient SQL database access in a driver-agnostic way
    Just pass `true` as the second argument to the `fromPdo` method to completely preserve the original state of your `PDO` instance:
 
    ```php
-   $db = \Delight\Db\PdoDatabase::fromPdo($pdo, true);
+   $db = \rockymc\Db\PdoDatabase::fromPdo($pdo, true);
    ```
 
 ### Selecting data
@@ -256,7 +256,7 @@ There's no need for you to escape any input manually. Just use the methods as sh
 In order to monitor query performance during development, you can enable performance profiling:
 
 ```php
-$db->setProfiler(new \Delight\Db\SimpleProfiler());
+$db->setProfiler(new \rockymc\Db\SimpleProfiler());
 ```
 
 Whenever you want to see the analyzed queries or store them in a log file, you can get all measurements recorded by the profiler as an array:
@@ -294,7 +294,7 @@ $db->getClientVersion();
 #### Connection established
 
 ```php
-$db->addOnConnectListener(function (\Delight\Db\PdoDatabase $db) {
+$db->addOnConnectListener(function (\rockymc\Db\PdoDatabase $db) {
 	// do something
 });
 ```
