@@ -7,7 +7,7 @@
 	},
 	"type": "library",
 	"keywords": [ "database", "sql", "pdo", "mssql" ],
-	"homepage": "https://github.com/rockymc/PHP-DB",
+	"homepage": "https://github.com/delight-im/PHP-DB",
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
